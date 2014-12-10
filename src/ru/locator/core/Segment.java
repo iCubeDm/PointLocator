@@ -27,7 +27,7 @@ public class Segment
 		/**
 		 * Возвращает проекцию отрезка на ось ОХ
 		 *
-		 * @return ru.locator.Segmentore.Segment
+		 * @return Segment
 		 */
 		public Segment getOXProjection()
 		{
@@ -37,7 +37,7 @@ public class Segment
 		/**
 		 * Возвращает проекцию отрезка на ось ОY
 		 *
-		 * @return ru.locator.coreocator.Segment
+		 * @return Segment
 		 */
 		public Segment getOYProjection()
 		{

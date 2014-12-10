@@ -19,7 +19,7 @@ public class Point
 		}
 
 		/**
-		 * @param point incoming ru.locator.core.Point.core.Point
+		 * @param point дистанция до входящей точки
 		 * @return double
 		 */
 		public double getDistanceToPoint(Point point)

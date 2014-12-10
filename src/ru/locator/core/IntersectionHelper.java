@@ -5,8 +5,11 @@ package ru.locator.core;
  */
 public class IntersectionHelper
 {
-		/* LAT - широта = Y */
-		/* LNG - долгота = X */
+		/*
+		Для географических координат:
+		LAT - широта = Y
+		LNG - долгота = X
+		*/
 
 		/**
 		 * Пусть заданы три точки A, B и C.
@@ -25,7 +28,7 @@ public class IntersectionHelper
 		 */
 		public static Double rotate(Point currentPoint, Point segmentBegin, Point segmentEnd)
 		{
-				return (segmentBegin.getX() - segmentBegin.getY()) * (currentPoint.getY() - segmentEnd.getY()) -
+				return (segmentBegin.getX() - segmentEnd.getX()) * (currentPoint.getY() - segmentEnd.getY()) -
 								(segmentEnd.getY() - segmentBegin.getY()) * (currentPoint.getX() - segmentEnd.getX());
 		}
 
@@ -45,7 +48,7 @@ public class IntersectionHelper
 		 * @link http://habrahabr.ru/post/144571/
 		 * 42:8
 		 */
-		public static boolean isIntersection(Segment firstSegment, Segment secondSegment)
+		public static boolean intersect(Segment firstSegment, Segment secondSegment)
 		{
 				return (rotate(firstSegment.getStartPoint(), firstSegment.getEndPoint(), secondSegment.getStartPoint())
 								* rotate(firstSegment.getStartPoint(), firstSegment.getEndPoint(), secondSegment.getEndPoint()) <= 0
