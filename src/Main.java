@@ -1,4 +1,4 @@
-import ru.locator.core.LocalizationHelper;
+import ru.locator.helpers.LocalizationHelper;
 import ru.locator.core.Point;
 import ru.locator.core.Segment;
 
@@ -18,6 +18,5 @@ public class Main
 				Segment CD = new Segment(C, D);
 
 				System.out.println(LocalizationHelper.intersect(AB, CD));
-
 		}
 }

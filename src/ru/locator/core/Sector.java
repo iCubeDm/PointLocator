@@ -1,5 +1,7 @@
 package ru.locator.core;
 
+import ru.locator.helpers.LocalizationHelper;
+
 /**
  * Created by dymsp
  */
@@ -17,7 +19,8 @@ public class Sector
 		}
 
 		/**
-		 * Проверяет попадение входящей точки в сектор
+		 * Проверяет попадение входящей точки в треугольник, образованный точками сектора
+		 * (погрешность зависит от длины хорды)
 		 * @param point point
 		 * @return boolean
 		 */

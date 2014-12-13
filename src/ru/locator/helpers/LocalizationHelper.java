@@ -1,4 +1,7 @@
-package ru.locator.core;
+package ru.locator.helpers;
+
+import ru.locator.core.Point;
+import ru.locator.core.Segment;
 
 /**
  * Created by dymsp
