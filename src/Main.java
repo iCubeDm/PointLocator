@@ -1,4 +1,4 @@
-import ru.locator.core.IntersectionHelper;
+import ru.locator.core.LocalizationHelper;
 import ru.locator.core.Point;
 import ru.locator.core.Segment;
 
@@ -17,6 +17,7 @@ public class Main
 				Segment AB = new Segment(A, B);
 				Segment CD = new Segment(C, D);
 
-				System.out.println(IntersectionHelper.intersect(AB, CD));
+				System.out.println(LocalizationHelper.intersect(AB, CD));
+
 		}
 }

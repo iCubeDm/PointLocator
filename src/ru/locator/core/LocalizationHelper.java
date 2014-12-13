@@ -3,7 +3,7 @@ package ru.locator.core;
 /**
  * Created by dymsp
  */
-public class IntersectionHelper
+public class LocalizationHelper
 {
 		/*
 		Для географических координат:

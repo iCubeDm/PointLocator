@@ -19,7 +19,7 @@ public class Segment
 		 *
 		 * @return double
 		 */
-		public double getLength()
+		public double length()
 		{
 				return this.getStartPoint().getDistanceToPoint(this.getEndPoint());
 		}
