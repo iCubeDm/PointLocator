@@ -1,6 +1,6 @@
-import ru.locator.helpers.LocalizationHelper;
+import ru.locator.PolygonLocator;
 import ru.locator.core.Point;
-import ru.locator.core.Segment;
+import java.util.ArrayList;
 
 /**
  * Created by dymsp
@@ -9,14 +9,27 @@ public class Main
 {
 		public static void main(String[] args)
 		{
-				Point A = new Point(-5, 1);
-				Point B = new Point(5, 1);
-				Point C = new Point(1, -5);
-				Point D = new Point(1, 5);
+				ArrayList<Point> polygon = new ArrayList<Point>();
+				polygon.add(new Point(0, -8));
+				polygon.add(new Point(-6, -6));
+				polygon.add(new Point(-8, 0));
+				polygon.add(new Point(-6, 6));
+				polygon.add(new Point(0, 8));
+				polygon.add(new Point(6, 6));
+				polygon.add(new Point(8, 0));
+				polygon.add(new Point(6, -6));
 
-				Segment AB = new Segment(A, B);
-				Segment CD = new Segment(C, D);
+				Point A = new Point(2, 3);
+				Point B = new Point(8, 4);
+				Point C = new Point(-8, -4);
+				Point D = new Point(-4, 3);
 
-				System.out.println(LocalizationHelper.intersect(AB, CD));
+				PolygonLocator locator = new PolygonLocator(polygon, new Point(0, 0));
+
+
+				System.out.println(locator.localize(A, false).toString());
+				System.out.println(locator.localize(B, false).toString());
+				System.out.println(locator.localize(C, false).toString());
+				System.out.println(locator.localize(D, false).toString());
 		}
 }

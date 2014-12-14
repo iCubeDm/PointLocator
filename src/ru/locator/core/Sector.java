@@ -21,6 +21,7 @@ public class Sector
 		/**
 		 * Проверяет попадение входящей точки в треугольник, образованный точками сектора
 		 * (погрешность зависит от длины хорды)
+		 *
 		 * @param point point
 		 * @return boolean
 		 */
@@ -37,6 +38,7 @@ public class Sector
 
 		/**
 		 * Возвращает длину дуги
+		 *
 		 * @return double
 		 */
 		public double arcLength()
@@ -46,6 +48,7 @@ public class Sector
 
 		/**
 		 * Возвращает длину окружности
+		 *
 		 * @return double
 		 */
 		public double circleLenght()
@@ -56,6 +59,7 @@ public class Sector
 		/**
 		 * Возвращает угол сектора.
 		 * Вычисляется по теореме косинусов, с учетом того, что правая и левая точки лежат на окружности, содержащей сектор.
+		 *
 		 * @return double
 		 */
 		public double angle()
@@ -97,5 +101,15 @@ public class Sector
 		public Point getLeft()
 		{
 				return left;
+		}
+
+		@Override
+		public String toString()
+		{
+				return "Sector{\n" +
+								"center = " + center +
+								",\n right = " + right +
+								",\n left = " + left +
+								"\n}";
 		}
 }
